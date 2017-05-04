@@ -1,0 +1,6 @@
+#ifndef COMPETITION_H_INCLUDED
+#define COMPETITION_H_INCLUDED
+
+// TODO Fill this Up!!!
+
+#endif // COMPETITION_H_INCLUDED
