@@ -1,5 +1,4 @@
 // TODO Fill this Up!!!
-// TODO Fill this Up!!!
 #include <iostream>
 #include <string>
 #include "Competition.h"
@@ -32,6 +31,13 @@ ImmunityCompetition::~ImmunityCompetition() {
 }
 
 void ImmunityCompetition::status(void) {
+
+    //o compiler bgazei error kai edo
+    //epeidh o malakas o Alexandros ksanaegrapse
+    //tin klash Competition xoris na balei
+    //synartisi status() opos elege i ekfonisi
+    //gia mia akoma fora: poso eksypnos niotheis tora
+    //Alexandre?
     Competition::status();
     cout << "Award Info" << endl;
     (this->immunityAward).status();
@@ -42,8 +48,17 @@ void ImmunityCompetition::status(void) {
 void ImmunityCompetition::compete(Team &team) {
     int num = team.getNumberOfPlayers();
     Player *temp = team.getPlayers();
+    Player *winner;
+    int maximum = temp->getPower();
     
     for(int i=0; i<num; i++) {
-
+	if( maximum < (temp+i)->getPower()) {
+	    maximum = (temp+i)->getPower();
+	    winner = temp;
+	}
     }
+    
+    this->immunityAward.setName(winner->getName());
+    winner->setCandidate(false);
+    
 }
