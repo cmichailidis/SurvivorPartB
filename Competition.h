@@ -20,6 +20,10 @@ public:
     void setName(string name) {this->name = name;}
     void setWinner(string winner) {this->winner = winner;}
     void setRound(int i, Round r){rounds[i] = r;}
+
+    //o compiler bgazei error se ayto to shmeio
+    //epeisis ayto to kommati kodika den tha eprepe na yparxei edo
+    //poso eksypnos niotheis tora alexandre?
     void setRounds(Round rs[19]){for(int i=0;i<10;i++) setRound(i, rs[i];)}
 
     int getId(void) {return this->id;}
