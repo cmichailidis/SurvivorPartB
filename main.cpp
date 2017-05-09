@@ -1,6 +1,9 @@
+#include <iostream>
+#include <string>
 #include "Team.h"
+//#include "TeamCompetition.h"
 
-using namespace std;
+//using namespace std;
 
 Team teams[2] = { Team("Diasimoi"), Team("Maxites")};
 int competitionId = 0;

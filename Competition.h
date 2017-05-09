@@ -2,5 +2,26 @@
 #define COMPETITION_H_INCLUDED
 
 // TODO Fill this Up!!!
+#include <iostream>
+#include <string>
 
+class Competition {
+protected:
+    int id;
+    string name;
+    string winner;
+
+public:
+    void setId(int id) {this->id = id;}
+    void setName(string name) {this->name = name;}
+    void setWinner(string winner) {this->winner = winner;}
+
+    int getId(void) {return this->id;}
+    string getName(void) {return this->name;}
+    string getWinner(void) {return this->winner;}
+
+    Competition() { this->id = 0;this->name = "";this->winner = "";};
+
+    Competition(int id, string name) {this->id = id;this->name = name;};
+};
 #endif // COMPETITION_H_INCLUDED

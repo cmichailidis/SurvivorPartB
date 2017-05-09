@@ -3,11 +3,13 @@
 
 // TODO Fill this Up!!!
 
+
+#include "Team.h"
 #include "Competition.h"
-#include "FoodAward"
+#include "FoodAward.h"
 #include "Round.h"
 
-class TeamComp : public Comp {
+class TeamCompetition : public Competition {
 protected:
 	// This is the Food Award variable
 	FoodAward foodAward;
@@ -16,14 +18,16 @@ protected:
 
 public:
 	// Constructor
-	TeamComp():Comp(){ foodAward = FoodAward(); for(int i=0;i<19;++i)rounds[i] = Round();};
-	TeamComp(int id, string name, FoodAward f):TeamComp(id,name);
-	
+	TeamCompetition():Competition(){ foodAward = FoodAward(); for(int i=0;i<19;++i)rounds[i] = Round();};
+	TeamCompetition(int id, string name, FoodAward f):Competition(id,name);
+
 	// Destructor
-	~TeamComp():~Comp() {cout << "TeamComp with the beautifull name " << this.name << " just destroyed." << endl; };
+	~TeamCompetition():~Competition() {cout << "TeamComp with the beautifull name " << this.name << " just destroyed." << endl; };
 
 	// Setters
 	void setFoodAward(FoodAward f){ this.foodAward = f;};
-	void setRound(int i, Round 
+	void setRound(int i, Round r){this.rounds[i] = r[i];};
+
+	int Compete(Team &team1, Team &team2);
 
 #endif // TEAMCOMPETITION_H_INCLUDED
