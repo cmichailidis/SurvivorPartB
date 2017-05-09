@@ -6,6 +6,7 @@
 
 #include "Team.h"
 #include "Competition.h"
+#include "Award.h"
 #include "FoodAward.h"
 #include "Round.h"
 
@@ -19,15 +20,15 @@ protected:
 public:
 	// Constructor
 	TeamCompetition():Competition(){ foodAward = FoodAward(); for(int i=0;i<19;++i)rounds[i] = Round();};
-	TeamCompetition(int id, string name, FoodAward f):Competition(id,name);
+	TeamCompetition(int id, string name, FoodAward f):Competition(id,name){foodAward=f;};
 
 	// Destructor
-	~TeamCompetition():~Competition() {cout << "TeamComp with the beautifull name " << this.name << " just destroyed." << endl; };
+	~TeamCompetition(){cout << "TeamComp with the beautifull name " << this->name << " just destroyed." << endl; };
 
 	// Setters
-	void setFoodAward(FoodAward f){ this.foodAward = f;};
-	void setRound(int i, Round r){this.rounds[i] = r[i];};
+	void setFoodAward(FoodAward f){ this->foodAward = f;}
+	void setRound(int i, Round r){this->rounds[i] = r;}
 
-	int Compete(Team &team1, Team &team2);
-
+	int compete(Team &team1, Team &team2);
+};
 #endif // TEAMCOMPETITION_H_INCLUDED
