@@ -29,8 +29,12 @@ int TeamCompetition::compete(Team &team1, Team &team2){
                 w2++;
             }
         }
-        if(p1.getPower() > p2.getPower()) {
-
+        else if(p1.getPower() > p2.getPower()) {
+            rounds[i] = Round(i, 500, p1.getName());
+            w1++;
+        } else {
+            rounds[i] = Round(i, 500, p2.getName());
+            w2++;
         }
     }
 

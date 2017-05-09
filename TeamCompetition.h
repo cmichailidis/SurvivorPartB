@@ -6,16 +6,12 @@
 
 #include "Team.h"
 #include "Competition.h"
-#include "Award.h"
 #include "FoodAward.h"
-#include "Round.h"
 
 class TeamCompetition : public Competition {
 protected:
 	// This is the Food Award variable
 	FoodAward foodAward;
-	// An Array or rounds, as it apears from the vairbles name 'rounds'
-	Round rounds[19];
 
 public:
 	// Constructor
@@ -27,7 +23,9 @@ public:
 
 	// Setters
 	void setFoodAward(FoodAward f){ this->foodAward = f;}
-	void setRound(int i, Round r){this->rounds[i] = r;}
+
+	// Getters
+	FoodAward getFoodAward() {return foodAward;}
 
 	int compete(Team &team1, Team &team2);
 };
