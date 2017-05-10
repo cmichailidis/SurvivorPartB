@@ -1,27 +1,21 @@
 // TODO Fill this Up!!!
-#include <iostream>
-#include <string>
+
 #include "TeamCompetition.h"
-#include "Competition.h"
-#include "Award.h"
-#include "FoodAward.h"
-#include "Round.h"
 
-using namespace TeamCompetition;
-
-TeamCompetition():Competition(){
+TeamCompetition::TeamCompetition():Competition(){
 
     foodAward = FoodAward();
     rounds = new Round [19];
 }
-TeamCompetition(int id, string name, FoodAward f):Competition(id,name){
+
+TeamCompetition::TeamCompetition(int id, string name, FoodAward f):Competition(id,name){
 
     foodAward = f;
     rounds = new Round [19];
 
 }
 
-int compete(Team &team1, Team &team2){
+int TeamCompetition::compete(Team &team1, Team &team2){
     int i = 0, w1 = 0, w2 = 0;
 
     while(w1 < 10 && w2 < 10) {

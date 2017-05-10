@@ -15,8 +15,8 @@ protected:
 
 public:
 	// Constructor
-	TeamCompetition():Competition(){ foodAward = FoodAward(); for(int i=0;i<19;++i)rounds[i] = Round();};
-	TeamCompetition(int id, string name, FoodAward f):Competition(id,name){foodAward=f;};
+	TeamCompetition();
+	TeamCompetition(int id, string name, FoodAward f);
 
 	// Destructor
 	~TeamCompetition(){cout << "TeamComp with the beautifull name " << this->name << " just destroyed." << endl; };

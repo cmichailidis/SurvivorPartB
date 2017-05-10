@@ -13,7 +13,7 @@ protected:
     int id;
     string name;
     string winner;
-    Round rounds[19];
+    Round *rounds;
 
 public:
     void setId(int id) {this->id = id;}
@@ -48,6 +48,10 @@ public:
     Competition(int id, string name) {
         this->id = id;
         this->name = name;
+    }
+    ~Competition() {
+        cout << "Competition is over with winner " << this->winner <<" ."<< endl;
+        delete [] this->rounds;
     }
 };
 #endif // COMPETITION_H_INCLUDED
