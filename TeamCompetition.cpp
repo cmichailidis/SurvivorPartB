@@ -28,17 +28,21 @@ int TeamCompetition::compete(Team &team1, Team &team2){
         if(p1.getPower() == p2.getPower()) {
             if(p1.getHunger() < p2.getHunger()) {
                 rounds[i] = Round(i, 500, p1.getName());
+                i++;
                 w1++;
             } else {
                 rounds[i] = Round(i, 500, p2.getName());
+                i++;
                 w2++;
             }
         }
         else if(p1.getPower() > p2.getPower()) {
             rounds[i] = Round(i, 500, p1.getName());
+            i++;
             w1++;
         } else {
             rounds[i] = Round(i, 500, p2.getName());
+            i++;
             w2++;
         }
     }

@@ -30,7 +30,8 @@ public:
     //Getters
 
 
-    int compete(Team &team1, Team &team2);
+
+    void compete(Team &team1, Team &team2);
 };
 
 #endif // QUIZCOMPETITION_H_INCLUDED
