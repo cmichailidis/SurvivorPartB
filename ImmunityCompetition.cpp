@@ -54,11 +54,9 @@ void ImmunityCompetition::compete(Team &team) {
     for(int i=0; i<num; i++) {
 	if( maximum < (temp+i)->getPower()) {
 	    maximum = (temp+i)->getPower();
-	    winner = temp;
+	    winner = temp + i;
 	}
     }
     
     this->immunityAward.setName(winner->getName());
-    winner->setCandidate(false);
-    
 }
