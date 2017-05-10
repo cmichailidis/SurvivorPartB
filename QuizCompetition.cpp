@@ -3,6 +3,16 @@
 
 using namespace QuizCompetition;
 
+QuizCompetition():Competition() {
+    communicationAward = CommunicationAward();
+    rounds = new Round [19];
+}
+
+QuizCompetition(int id, string name, CommunicationAward award):Competition(id,name) {
+    communicationAward = award;
+    rounds = new Round [19];
+}
+
 int compete(Team, &team1, Team &team2) {
     int w1 = 0, w2 = 0;
 
