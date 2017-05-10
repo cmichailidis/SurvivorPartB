@@ -24,7 +24,16 @@ public:
     //o compiler bgazei error se ayto to shmeio
     //epeisis ayto to kommati kodika den tha eprepe na yparxei edo
     //poso eksypnos niotheis tora alexandre?
-    void setRounds(Round rs[19]){for(int i=0;i<10;i++) setRound(i, rs[i];)}
+    void setRounds(Round rs[19]){for(int i=0;i<10;i++) setRound(i, rs[i]);}
+
+    void status(void) {
+        cout << "=============================" << endl;
+        cout << "Competition info" << endl;
+        cout << "ID:      " << this->id << endl;
+        cout << "NAME:    " << this->name << endl;
+        cout << "WINNER:  " << this->winner << endl;
+        cout << "-----------------------------" << endl;
+    }
 
     int getId(void) {return this->id;}
     string getName(void) {return this->name;}
